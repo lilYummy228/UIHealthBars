@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class DamageController : MonoBehaviour
+public class Health : MonoBehaviour
 {
     [SerializeField] private Material _hurtBlinkMaterial;
     [SerializeField] private Material _healBlinkMaterial;
@@ -31,7 +31,7 @@ public class DamageController : MonoBehaviour
     {
         CurrentHealthValue += healValue;
 
-        StartCoroutine(HealBlink());
+        StartCoroutine(Blink(_healBlinkMaterial));
 
         if (CurrentHealthValue > MaxHealthValue)
             CurrentHealthValue = MaxHealthValue;
@@ -41,24 +41,15 @@ public class DamageController : MonoBehaviour
     {
         CurrentHealthValue -= damage;
 
-        StartCoroutine(HurtBlink());
+        StartCoroutine(Blink(_hurtBlinkMaterial));
 
         if (CurrentHealthValue <= 0)
             Dead();
     }
 
-    private IEnumerator HurtBlink()
+    private IEnumerator Blink(Material material)
     {
-        _spriteRenderer.material = _hurtBlinkMaterial;
-
-        yield return _wait;
-
-        _spriteRenderer.material = _defaultMaterial;
-    }
-
-    private IEnumerator HealBlink()
-    {
-        _spriteRenderer.material = _healBlinkMaterial;
+        _spriteRenderer.material = material;
 
         yield return _wait;
 
