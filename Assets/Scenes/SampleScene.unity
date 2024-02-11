@@ -242,7 +242,7 @@ PrefabInstance:
     - target: {fileID: 795608071659957765, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
       propertyPath: _damageController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 404165534}
     - target: {fileID: 2245988337235639287, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -258,6 +258,14 @@ PrefabInstance:
     - target: {fileID: 2915145436247724245, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 404165534}
+    - target: {fileID: 2915145436247724245, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Heal
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915145436247724245, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Health, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3072421565085937119, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
       propertyPath: m_AnchorMax.x
@@ -278,6 +286,14 @@ PrefabInstance:
     - target: {fileID: 4486855322063134082, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 404165534}
+    - target: {fileID: 4486855322063134082, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TakeDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486855322063134082, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Health, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6104427345274238036, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
       propertyPath: m_Pivot.x
@@ -362,11 +378,11 @@ PrefabInstance:
     - target: {fileID: 8411061701338923922, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
       propertyPath: _damageController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 404165534}
     - target: {fileID: 9051454391438528483, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
       propertyPath: _damageController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 404165534}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
