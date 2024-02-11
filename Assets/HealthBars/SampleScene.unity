@@ -220,8 +220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 801e95f587cf1da4ca55f14a4741cf89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hurtBlinkMaterial: {fileID: 2100000, guid: d960070712cfc5b409dcf502f8402916, type: 2}
-  _healBlinkMaterial: {fileID: 2100000, guid: cd5ebdb1aaa18e24aa8248ef9484ab2d, type: 2}
   CurrentHealthValue: 100
 --- !u!1001 &456298080
 PrefabInstance:
@@ -236,9 +234,17 @@ PrefabInstance:
       value: Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 654375959258810218, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 654375959258810218, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 795608071659957765, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: _health
+      value: 
+      objectReference: {fileID: 404165534}
     - target: {fileID: 795608071659957765, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
       propertyPath: _damageController
       value: 
@@ -252,7 +258,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2455316406863970579, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455316406863970579, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2455316406863970579, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2915145436247724245, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
@@ -279,6 +293,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 404165534}
+    - target: {fileID: 4486855322063134082, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TakeDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250583557887128624, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: m_Value
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443874411390311176, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: m_Value
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 6104427345274238036, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -360,7 +386,19 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8411061701338923922, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: _health
+      value: 
+      objectReference: {fileID: 404165534}
+    - target: {fileID: 8411061701338923922, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: _reduceSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411061701338923922, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
       propertyPath: _damageController
+      value: 
+      objectReference: {fileID: 404165534}
+    - target: {fileID: 9051454391438528483, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: _health
       value: 
       objectReference: {fileID: 404165534}
     - target: {fileID: 9051454391438528483, guid: 219afbe0282b9be49958e2e93444a567, type: 3}

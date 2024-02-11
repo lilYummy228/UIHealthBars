@@ -1,21 +1,42 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Slider))]
 public class SmoothSliderHealthBar : MonoBehaviour
 {
-    [SerializeField] private Health _damageController;
-    [SerializeField] private float _reduceSpeed = 35f;
+    [SerializeField] private Health _health;
+    [SerializeField] private float _reduceSpeed = 10f;
 
-    public Slider HealthSlider { get; private set; }
+    private Slider _healthSlider;
 
-    public void Start()
+    private void OnEnable()
     {
-        HealthSlider = GetComponent<Slider>();
+        _health.CurrentHealthChanged += ChangeValue;
     }
 
-    public void Update()
+    private void OnDisable()
     {
-        HealthSlider.value = Mathf.MoveTowards(HealthSlider.value, _damageController.CurrentHealthValue, _reduceSpeed * Time.deltaTime);
+        _health.CurrentHealthChanged -= ChangeValue;
+    }
+
+    private void Start()
+    {
+        _healthSlider = GetComponent<Slider>();
+        _healthSlider.value = _health.CurrentHealthValue;
+    }
+
+    public void ChangeValue()
+    {
+        StartCoroutine(ChangeHealth());
+    }
+
+    private IEnumerator ChangeHealth()
+    {
+        while (_healthSlider.value != _health.CurrentHealthValue)
+        {
+            _healthSlider.value = Mathf.MoveTowards(_healthSlider.value, _health.CurrentHealthValue, _reduceSpeed * Time.deltaTime);
+            yield return new WaitWhile(() => _healthSlider.value == _health.CurrentHealthValue);
+        }
     }
 }

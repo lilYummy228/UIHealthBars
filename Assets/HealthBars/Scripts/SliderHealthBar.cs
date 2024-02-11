@@ -4,17 +4,28 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Slider))]
 public class SliderHealthBar : MonoBehaviour
 {
-    [SerializeField] private Health _damageController;
+    [SerializeField] private Health _health;
 
-    public Slider HealthSlider { get; private set; }
+    private Slider _healthSlider;
 
-    public virtual void Start()
+    private void OnEnable()
     {
-        HealthSlider = GetComponent<Slider>();
+        _health.CurrentHealthChanged += ChangeValue;
     }
 
-    public virtual void Update()
+    private void OnDisable()
     {
-        HealthSlider.value = _damageController.CurrentHealthValue;
+        _health.CurrentHealthChanged -= ChangeValue;
+    }
+
+    private void Start()
+    {
+        _healthSlider = GetComponent<Slider>();
+        _healthSlider.value = _health.CurrentHealthValue;
+    }
+
+    public virtual void ChangeValue()
+    {
+        _healthSlider.value = _health.CurrentHealthValue;
     }
 }
