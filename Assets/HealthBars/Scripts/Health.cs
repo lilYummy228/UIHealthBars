@@ -3,13 +3,16 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int CurrentHealthValue;
-    public event Action CurrentHealthChanged;
+    [SerializeField, Range(0, 100)] private int HealthValue;
 
+    public int CurrentHealthValue { get; private set; }
     public int MaxHealthValue { get; private set; }
+
+    public event Action CurrentHealthChanged;
 
     private void Awake()
     {
+        CurrentHealthValue = HealthValue;
         MaxHealthValue = CurrentHealthValue;
     }
 

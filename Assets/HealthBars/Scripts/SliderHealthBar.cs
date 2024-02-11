@@ -1,31 +1,17 @@
-using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Slider))]
-public class SliderHealthBar : MonoBehaviour
+public class SliderHealthBar : HealthBar
 {
-    [SerializeField] private Health _health;
-
     private Slider _healthSlider;
-
-    private void OnEnable()
-    {
-        _health.CurrentHealthChanged += ChangeValue;
-    }
-
-    private void OnDisable()
-    {
-        _health.CurrentHealthChanged -= ChangeValue;
-    }
 
     private void Start()
     {
         _healthSlider = GetComponent<Slider>();
-        _healthSlider.value = _health.CurrentHealthValue;
+        _healthSlider.value = Health.CurrentHealthValue;
     }
 
-    public virtual void ChangeValue()
+    public override void ChangeValue()
     {
-        _healthSlider.value = _health.CurrentHealthValue;
+        _healthSlider.value = Health.CurrentHealthValue;
     }
 }

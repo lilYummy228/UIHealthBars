@@ -1,31 +1,17 @@
 using TMPro;
-using UnityEngine;
 
-[RequireComponent(typeof(TextMeshProUGUI))]
-public class TextHealthBar : MonoBehaviour
+public class TextHealthBar : HealthBar
 {
-    [SerializeField] private Health _health;
-
     private TextMeshProUGUI _textHealthValue;
 
-    private void OnEnable()
-    {
-        _health.CurrentHealthChanged += ChangeValue;
-    }
-
-    private void OnDisable()
-    {
-        _health.CurrentHealthChanged -= ChangeValue;
-    }
-
-    public void Start()
+    private void Start()
     {
         _textHealthValue = GetComponent<TextMeshProUGUI>();
-        _textHealthValue.text = $"{_health.CurrentHealthValue}/{_health.MaxHealthValue}";
+        _textHealthValue.text = $"{Health.CurrentHealthValue}/{Health.MaxHealthValue}";
     }
 
-    private void ChangeValue()
+    public override void ChangeValue()
     {
-        _textHealthValue.text = $"{_health.CurrentHealthValue}/{_health.MaxHealthValue}";
+        _textHealthValue.text = $"{Health.CurrentHealthValue}/{Health.MaxHealthValue}";
     }
 }

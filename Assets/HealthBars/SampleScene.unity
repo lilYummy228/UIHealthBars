@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 801e95f587cf1da4ca55f14a4741cf89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentHealthValue: 100
+  HealthValue: 100
 --- !u!1001 &456298080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -233,6 +233,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 600010273301491892, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 600010273301491892, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 600010273301491892, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
     - target: {fileID: 654375959258810218, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -242,9 +254,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 795608071659957765, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: Health
+      value: 
+      objectReference: {fileID: 404165534}
+    - target: {fileID: 795608071659957765, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
       propertyPath: _health
       value: 
       objectReference: {fileID: 404165534}
+    - target: {fileID: 795608071659957765, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: _gameObject
+      value: 
+      objectReference: {fileID: 404165530}
     - target: {fileID: 795608071659957765, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
       propertyPath: _damageController
       value: 
@@ -385,6 +405,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6254933184318953716, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 6254933184318953716, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 6254933184318953716, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411061701338923922, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: Health
+      value: 
+      objectReference: {fileID: 404165534}
     - target: {fileID: 8411061701338923922, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
       propertyPath: _health
       value: 
@@ -398,13 +434,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 404165534}
     - target: {fileID: 9051454391438528483, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: Health
+      value: 
+      objectReference: {fileID: 404165534}
+    - target: {fileID: 9051454391438528483, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
       propertyPath: _health
       value: 
       objectReference: {fileID: 404165534}
     - target: {fileID: 9051454391438528483, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: _gameObject
+      value: 
+      objectReference: {fileID: 404165530}
+    - target: {fileID: 9051454391438528483, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
       propertyPath: _damageController
       value: 
       objectReference: {fileID: 404165534}
+    - target: {fileID: 9054948378519566081, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: Health
+      value: 
+      objectReference: {fileID: 404165534}
+    - target: {fileID: 9054948378519566081, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: _health
+      value: 
+      objectReference: {fileID: 404165534}
+    - target: {fileID: 9054948378519566081, guid: 219afbe0282b9be49958e2e93444a567, type: 3}
+      propertyPath: _gameObject
+      value: 
+      objectReference: {fileID: 404165530}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

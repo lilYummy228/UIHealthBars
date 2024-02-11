@@ -1092,7 +1092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc2c88b725d45bc478d30ee2b64bce40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageController: {fileID: 0}
+  _health: {fileID: 0}
 --- !u!1 &5595765830387652207
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,7 +1276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f816dedbd91f74491de253e229b12d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageController: {fileID: 0}
+  _health: {fileID: 0}
 --- !u!1 &8053085187888542568
 GameObject:
   m_ObjectHideFlags: 0
@@ -1287,7 +1287,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3579012304493491210}
   - component: {fileID: 5443874411390311176}
-  - component: {fileID: 8411061701338923922}
+  - component: {fileID: 9054948378519566081}
   m_Layer: 5
   m_Name: SmoothSliderHealthBar
   m_TagString: Untagged
@@ -1368,7 +1368,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &8411061701338923922
+--- !u!114 &9054948378519566081
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1380,8 +1380,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44242308b31614c4081d91ef55d8b95c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageController: {fileID: 0}
-  _reduceSpeed: 35
+  _health: {fileID: 0}
+  _reduceSpeed: 10
 --- !u!1 &8515176544849412387
 GameObject:
   m_ObjectHideFlags: 0
